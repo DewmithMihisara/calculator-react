@@ -1,5 +1,4 @@
 import Navbar from '../component/nav_bar.jsx';
-import Btn from '../component/btns/btn.jsx';
 import MidRow from '../component/row/mid_row.jsx';
 import Row from '../component/row/row.jsx';
 
