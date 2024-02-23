@@ -1,4 +1,8 @@
 import Navbar from '../component/nav_bar.jsx';
+import Btn from '../component/btns/btn.jsx';
+import MidRow from '../component/row/mid_row.jsx';
+import Row from '../component/row/row.jsx';
+
 const Calculator = () => {
     return (
         <div className="main-container">
@@ -12,34 +16,11 @@ const Calculator = () => {
 
                     <div className="w-100 ">
                         <div className="container text-center row-gap-3 text-light">
-                            <div class="row  column-gap-3">
-                                <button type="button" class="btn btn-outline-danger col-6 rounded-5 d-flex justify-content-center align-items-center ">C</button>
-                                <button type="button" class="btn btn-outline-success col rounded-5 d-flex justify-content-center align-items-center ">⇦</button>
-                                <button type="button" class="btn btn-outline-success col rounded-5 d-flex justify-content-center align-items-center ">/</button>
-                            </div>
-                            <div class="row column-gap-3 mt-3">
-                                <button type="button" class="btn btn-outline-dark col rounded-5 d-flex justify-content-center align-items-center ">7</button>
-                                <button type="button" class="btn btn-outline-dark col rounded-5 d-flex justify-content-center align-items-center ">8</button>
-                                <button type="button" class="btn btn-outline-dark col rounded-5 d-flex justify-content-center align-items-center ">9</button>
-                                <button type="button" class="btn btn-outline-success col rounded-5 d-flex justify-content-center align-items-center ">*</button>
-                            </div>
-                            <div class="row column-gap-3 mt-3">
-                                <button type="button" class="btn btn-outline-dark col rounded-5 d-flex justify-content-center align-items-center ">4</button>
-                                <button type="button" class="btn btn-outline-dark col rounded-5 d-flex justify-content-center align-items-center ">5</button>
-                                <button type="button" class="btn btn-outline-dark col rounded-5 d-flex justify-content-center align-items-center ">6</button>
-                                <button type="button" class="btn btn-outline-success col rounded-5 d-flex justify-content-center align-items-center ">-</button>
-                            </div>
-                            <div class="row column-gap-3 mt-3">
-                                <button type="button" class="btn btn-outline-dark col rounded-5 d-flex justify-content-center align-items-center ">1</button>
-                                <button type="button" class="btn btn-outline-dark col rounded-5 d-flex justify-content-center align-items-center ">2</button>
-                                <button type="button" class="btn btn-outline-dark col rounded-5 d-flex justify-content-center align-items-center ">3</button>
-                                <button type="button" class="btn btn-outline-success col rounded-5 d-flex justify-content-center align-items-center ">+</button>
-                            </div>
-                            <div class="row column-gap-3 d-flex justify-content-center mt-3">
-                                <button type="button" class="btn btn-outline-dark col-6 rounded-5 d-flex justify-content-center align-items-center ">0</button>
-                                <button type="button" class="btn btn-outline-dark col rounded-5 d-flex justify-content-center align-items-center ">.</button>
-                                <button type="button" class="btn btn-outline-success col rounded-5 d-flex justify-content-center align-items-center ">=</button>
-                            </div>
+                            <Row vals={["C","⇦","/"]} col={["danger","success","success"]} size={["col-6","col","col"]}/>
+                            <MidRow vals={[7, 8, 9]} sim={"*"} />
+                            <MidRow vals={[4, 5, 6]} sim={"-"} />
+                            <MidRow vals={[1, 2, 3]} sim={"+"} />
+                            <Row vals={[0,".","="]} col={["dark","dark","success"]} size={["col-6","col","col"]} spc={"d-flex justify-content-center mt-3"}/>
                         </div>
                     </div>
                 </section>
