@@ -13,6 +13,12 @@ const Calculator = () => {
             setDis('0');
         } else if (value === '⇦') {
             setDis(prevValue => prevValue.slice(0, -1));
+        } else {
+            setDis(prevValue => {
+                if (value === '.' && prevValue.includes('.')) return prevValue;
+                if (prevValue === '0' && ['*', '/', '+', '-'].includes(value)) return prevValue;
+                return prevValue + value;
+            });
         }
     }
     return (
