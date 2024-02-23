@@ -1,10 +1,13 @@
+import { useState } from 'react';
 import Navbar from '../component/nav_bar.jsx';
 import MidRow from '../component/row/mid_row.jsx';
 import Row from '../component/row/row.jsx';
 
 const Calculator = () => {
+    const [dis, setDis]=useState(0);
+
     let handleButtonClick=(value)=>{
-        console.log(value);
+        setDis(value);
     }
     return (
         <div className="main-container">
@@ -13,7 +16,7 @@ const Calculator = () => {
                 <section className="cal border border-light rounded-5 d-flex flex-column justify-content-around shadow-lg p-3 mb-5 ">
 
                     <div className="w-100 border-bottom border-danger d-flex justify-content-end align-items-end">
-                        <h1 id="main_num" className="me-4 mb-4 h1 display-1 ">0</h1>
+                        <h1 id="main_num" className="me-4 mb-4 h1 display-1 ">{dis}</h1>
                     </div>
 
                     <div className="w-100 ">
