@@ -11,7 +11,9 @@ const Calculator = () => {
             
         } else if (value === 'C') {
             setDis('0');
-        } 
+        } else if (value === '⇦') {
+            setDis(prevValue => prevValue.slice(0, -1));
+        }
     }
     return (
         <div className="main-container">
