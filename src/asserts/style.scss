@@ -20,23 +20,23 @@
     border: 2px solid black;
 }
 
-#cal {
+.cal {
     height: 80%;
     width: 25%;
     background-color: #FFFFFF;
     z-index: 100;
 }
 
-#cal > div:first-child {
+.cal > div:first-child {
     height: 20%;
 }
 
-#cal > div:nth-child(2) {
+.cal > div:nth-child(2) {
     height: 70%;
     z-index: 100;
 }
 
-#cal > div:nth-child(2) > div {
+.cal > div:nth-child(2) > div {
     margin: 2.5%;
     height: 95%;
     width: 95%;
