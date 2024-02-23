@@ -1,4 +1,4 @@
-const navbar = () => {
+const Navbar = () => {
     return (
         <nav className="navbar bg-body-tertiary">
             <div className="container-fluid">
@@ -8,4 +8,4 @@ const navbar = () => {
     );
 }
 
-export default navbar;
+export default Navbar;

@@ -4,7 +4,6 @@ import Calculetor from './views/calForm';
 import './asserts/style.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 function App() {
   return (
     <BrowserRouter>

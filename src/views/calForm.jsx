@@ -1,9 +1,10 @@
-const Calculator=()=>{
-    return(
+import Navbar from '../component/nav_bar.jsx';
+const Calculator = () => {
+    return (
         <>
-        <div className="main-container">
-
-        </div>
+            <div className="main-container">
+                <Navbar />
+            </div>
         </>
     );
 }
