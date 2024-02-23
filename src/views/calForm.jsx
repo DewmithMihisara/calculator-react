@@ -3,6 +3,9 @@ import MidRow from '../component/row/mid_row.jsx';
 import Row from '../component/row/row.jsx';
 
 const Calculator = () => {
+    let handleButtonClick=(value)=>{
+        console.log(value);
+    }
     return (
         <div className="main-container">
             <Navbar />
@@ -15,11 +18,11 @@ const Calculator = () => {
 
                     <div className="w-100 ">
                         <div className="container text-center row-gap-3 text-light">
-                            <Row vals={["C","⇦","/"]} col={["danger","success","success"]} size={["col-6","col","col"]}/>
-                            <MidRow vals={[7, 8, 9]} sim={"*"} />
-                            <MidRow vals={[4, 5, 6]} sim={"-"} />
-                            <MidRow vals={[1, 2, 3]} sim={"+"} />
-                            <Row vals={[0,".","="]} col={["dark","dark","success"]} size={["col-6","col","col"]} spc={"d-flex justify-content-center mt-3"}/>
+                            <Row vals={["C","⇦","/"]} col={["danger","success","success"]} size={["col-6","col","col"]} onClick={handleButtonClick}/>
+                            <MidRow vals={[7, 8, 9]} sim={"*"} onClick={handleButtonClick}/>
+                            <MidRow vals={[4, 5, 6]} sim={"-"} onClick={handleButtonClick}/>
+                            <MidRow vals={[1, 2, 3]} sim={"+"} onClick={handleButtonClick}/>
+                            <Row vals={[0,".","="]} col={["dark","dark","success"]} size={["col-6","col","col"]} spc={"d-flex justify-content-center mt-3"}onClick={handleButtonClick}/>
                         </div>
                     </div>
                 </section>
