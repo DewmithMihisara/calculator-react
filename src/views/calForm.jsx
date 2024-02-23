@@ -7,7 +7,11 @@ const Calculator = () => {
     const [dis, setDis]=useState(0);
 
     let handleButtonClick=(value)=>{
-        setDis(value);
+        if (value === '=') {
+            
+        } else if (value === 'C') {
+            setDis('0');
+        } 
     }
     return (
         <div className="main-container">
