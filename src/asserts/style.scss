@@ -1,7 +1,6 @@
 .main-container{
     width: 100vw;
     height: 100vh;
-    background-color: aquamarine;
 }
 .body{
     position: absolute;
@@ -16,11 +15,38 @@
 .calculator-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 30%;
     height: 70%;
     border: 2px solid black;
+}
+
+#cal {
+    height: 80%;
+    width: 25%;
+    background-color: #FFFFFF;
+    z-index: 100;
+}
+
+#cal > div:first-child {
+    height: 20%;
+}
+
+#cal > div:nth-child(2) {
+    height: 70%;
+    z-index: 100;
+}
+
+#cal > div:nth-child(2) > div {
+    margin: 2.5%;
+    height: 95%;
+    width: 95%;
+}
+
+.row {
+    height: calc(80% / 5);
+}
+.container button{
+    font-size: 2em;
 }
 
 @import '~bootstrap/scss/bootstrap.scss';
