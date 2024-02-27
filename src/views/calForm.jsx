@@ -7,18 +7,26 @@ const Calculator = () => {
     const [dis, setDis]=useState(0);
 
     let handleButtonClick=(value)=>{
-        if (value === '=') {
-            
-        } else if (value === 'C') {
-            setDis('0');
-        } else if (value === '⇦') {
-            setDis(prevValue => prevValue.slice(0, -1));
+        if (dis === '0' && value !== '.' && !['*', '/', '+', '-'].includes(value)) {
+            setDis(value.toString());
         } else {
-            setDis(prevValue => {
-                if (value === '.' && prevValue.includes('.')) return prevValue;
-                if (prevValue === '0' && ['*', '/', '+', '-'].includes(value)) return prevValue;
-                return prevValue + value;
-            });
+            if (value === '=') {
+                try {
+                    let result = eval(dis);
+                    setDis(result.toString());
+                } catch (error) {
+                    setDis('Error');
+                }
+            } else if (value === 'C') {
+                setDis('0');
+            } else if (value === '⇦') {
+                setDis(prevValue => prevValue.slice(0, -1));
+            } else {
+                setDis(prevValue => {
+                    if (value === '.' && prevValue.includes('.')) return prevValue;
+                    return prevValue + value;
+                });
+            }
         }
     }
     return (
